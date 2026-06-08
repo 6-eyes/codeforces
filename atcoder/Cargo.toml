@@ -3,4 +3,6 @@ name = "atcoder"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
+[[bin]]
+name = "practice2a"
+path = "src/practice2a.rs"
