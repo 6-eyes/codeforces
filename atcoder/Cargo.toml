@@ -6,3 +6,11 @@ edition = "2024"
 [[bin]]
 name = "practice2a"
 path = "src/practice2a.rs"
+
+[[bin]]
+name = "abc461_a"
+path = "src/abc461_a.rs"
+
+[[bin]]
+name = "abc461_b"
+path = "src/abc461_b.rs"
