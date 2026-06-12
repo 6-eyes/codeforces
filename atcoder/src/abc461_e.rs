@@ -11,7 +11,7 @@ fn main() -> Result<(), Error> {
 
 macro_rules! parse {
 	($iter: expr) => {
-		$iter.next().ok_or(Error::Iter)?.parse::<usize>().map_err(Error::Parse)?
+		$iter.next().ok_or(Error::Iter)?.parse::<usize>()?
 	};
 }
 
