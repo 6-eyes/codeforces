@@ -12,14 +12,8 @@ fn main() -> Result<(), Error> {
     Ok(())
 }
 
-fn solve(n: u32, mut m: u32) -> u32 {
-    let mut ans = 0;
-    while m > 0 {
-        m = n % m;
-        ans += 1;
-    }
-
-    ans
+fn solve(n: u32, m: u32) -> usize {
+    std::iter::successors(Some(m), |x| n.checked_rem(*x)).count() - 1
 }
 
 #[derive(Debug)]

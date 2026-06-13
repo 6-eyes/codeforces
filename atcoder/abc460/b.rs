@@ -14,6 +14,7 @@ macro_rules! parse {
         $iter.next().ok_or(Error::Iter)?.parse::<usize>()?
     };
 }
+
 fn solve(input: &str) -> Result<String, Error> {
     let mut iter = input.split_ascii_whitespace();
     let n = parse!(iter);
@@ -27,10 +28,9 @@ fn solve(input: &str) -> Result<String, Error> {
         // (r2 - r1)^2 < d < (r2 + r1)^2
         let r = r1.abs_diff(r2).pow(2)..=(r1 + r2).pow(2);
 
+        // finds a^2 + b^2
         let d = |a: usize, b: usize| a.abs_diff(b).pow(2);
-        let x = d(x1, x2);
-        let y = d(y1, y2);
-        let s = x + y;
+        let s = d(x1, x2) + d(y1, y2);
 
         use std::fmt::Write;
         writeln!(ans, "{}", if r.contains(&s) { "Yes" } else { "No" })?;
