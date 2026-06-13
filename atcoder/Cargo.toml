@@ -20,6 +20,10 @@ name = "abc460_d"
 path = "abc460/d.rs"
 
 [[bin]]
+name = "abc460_e"
+path = "abc460/e.rs"
+
+[[bin]]
 name = "practice2a"
 path = "practice2/a.rs"
 

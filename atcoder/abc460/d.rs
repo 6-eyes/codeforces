@@ -55,6 +55,7 @@ fn solve(input: &str) -> Result<String, Error> {
     // we use an even number here to handle the case of all white blocks. In this case, no matter the iterations, the cells will remain while.
     // if u32::MAX is used, the ans would contain black cells instead of white.
     const MAX: u32 = u32::MAX - 1;
+    // initialize distance grid with MAX distance
     let mut dist = vec!{ vec!{ MAX; w }; h };
     let mut q = VecDeque::new();
 
